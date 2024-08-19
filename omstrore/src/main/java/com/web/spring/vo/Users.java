@@ -2,12 +2,18 @@ package com.web.spring.vo;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+
 public class Users {
     private String userid;
 	private String name;
 	private String pwd;
 	private String email;
-	private Date birthdate;
+	private String birthdate;
+	private String address;
+	private String address1;
+	private String address2;
 	private String phone;
 	private String rating;
 	private int point;
@@ -15,14 +21,17 @@ public class Users {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Users(String userid, String name, String pwd, String email, Date birthdate, String phone, String rating,
-			int point) {
+	public Users(String userid, String name, String pwd, String email, String birthdate, String address, String address1,
+			String address2, String phone, String rating, int point) {
 		super();
 		this.userid = userid;
 		this.name = name;
 		this.pwd = pwd;
 		this.email = email;
 		this.birthdate = birthdate;
+		this.address = address;
+		this.address1 = address1;
+		this.address2 = address2;
 		this.phone = phone;
 		this.rating = rating;
 		this.point = point;
@@ -51,11 +60,29 @@ public class Users {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Date getBirthdate() {
+	public String getBirthdate() {
 		return birthdate;
 	}
-	public void setBirthdate(Date birthdate) {
+	public void setBirthdate(String birthdate) {
 		this.birthdate = birthdate;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getAddress1() {
+		return address1;
+	}
+	public void setAddress1(String address1) {
+		this.address1 = address1;
+	}
+	public String getAddress2() {
+		return address2;
+	}
+	public void setAddress2(String address2) {
+		this.address2 = address2;
 	}
 	public String getPhone() {
 		return phone;
@@ -74,6 +101,12 @@ public class Users {
 	}
 	public void setPoint(int point) {
 		this.point = point;
+	}
+
+
+	public Object getEmailVerificationCode() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }
